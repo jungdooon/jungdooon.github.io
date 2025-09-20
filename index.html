@@ -78,10 +78,26 @@
     <h2>연락하기</h2>
     <p>Email: <a href="mailto:jeongdo0621@gmail.com">jeongdo0621@gmail.com</a></p>
     <p>Phone: <a href="tel:01092193524">010-9219-3524</a></p>
-      </section>
+    <p>GitHub: <a href="https://github.com/bbabaktour" target="_blank">bbabaktour</a></p>
+  </section>
 
   <footer>
     <p>&copy; 2025 정도윤. All rights reserved.</p>
   </footer>
+
+  <!-- 방문자 IP 기록 스크립트 -->
+  <script>
+    fetch("https://api.ipify.org?format=json")
+      .then(r => r.json())
+      .then(data => {
+        fetch("https://script.google.com/macros/s/AKfycbzsIRH_BgRI7LUMZcvYwpwQ5ZS-FQEo51USfbC6SsUJqSVX-YODb_by2yh1MDNw60mvlA/exec", {
+          method: "POST",
+          body: JSON.stringify({
+            ip: data.ip,
+            ua: navigator.userAgent
+          })
+        });
+      });
+  </script>
 </body>
 </html>
