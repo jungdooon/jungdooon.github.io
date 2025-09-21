@@ -96,7 +96,7 @@
     fetch("https://api.ipify.org?format=json")
       .then(r => r.json())
       .then(data => {
-        fetch("https://docs.google.com/spreadsheets/d/1tRhsI2Civ_yi-uQxshdEHBPiFcYb3b5vDGIiSABWdew/edit?gid=0#gid=0", {
+        fetch("https://script.google.com/macros/s/AKfycbzsIRH_BgRI7LUMZcvYwpwQ5ZS-FQEo51USfbC6SsUJqSVX-YODb_by2yh1MDNw60mvlA/exec", {
           method: "POST",
           body: JSON.stringify({
             ip: data.ip,
@@ -107,4 +107,5 @@
   </script>
 </body>
 </html>
+
 
