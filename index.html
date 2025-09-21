@@ -96,7 +96,7 @@
     fetch("https://api.ipify.org?format=json")
       .then(r => r.json())
       .then(data => {
-        fetch("<<여기에_구글_앱스_스크립트_URL>>", {
+        fetch("https://docs.google.com/spreadsheets/d/1tRhsI2Civ_yi-uQxshdEHBPiFcYb3b5vDGIiSABWdew/edit?gid=0#gid=0", {
           method: "POST",
           body: JSON.stringify({
             ip: data.ip,
@@ -107,3 +107,4 @@
   </script>
 </body>
 </html>
+
